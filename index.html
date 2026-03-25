@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FASTECH JUNCTION DIGITAL - MT5 AI Trading Bots</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #0a1428 0%, #1a2338 100%); }
+        .glow-cyan { text-shadow: 0 0 25px #00f5ff; }
+        .section-bg { background: rgba(10, 20, 40, 0.85); }
+        .cta-button { transition: all 0.3s ease; }
+        .cta-button:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(0, 245, 255, 0.6); }
+        .timer-box { background: rgba(0, 245, 255, 0.1); border: 2px solid #00f5ff; }
+    </style>
+</head>
+<body class="bg-[#0a1428] text-white">
+
+    <!-- === EDIT THESE TWO LINES ONLY === -->
+    <script>
+        const PAYMENT_LINK = "https://selar.com/2p7y144021"; // ← CHANGE TO YOUR REAL PAYMENT LINK
+
+        // Countdown deadline (48 hours from now)
+        const DEADLINE = new Date(Date.now() + 48 * 60 * 60 * 1000);
+    </script>
+    <!-- ================================= -->
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full bg-[#0a1428]/90 backdrop-blur-md z-50 border-b border-cyan-500/30">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-cyan-400">FASTECH JUNCTION <span class="text-white">DIGITAL</span></div>
+            <a href="javascript:void(0)" onclick="enrollNow()" 
+               class="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-full font-semibold transition">
+                Enroll Now - ₦5,000
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION with White & Cyan Robot -->
+    <section class="hero-bg min-h-screen pt-24 flex items-center">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight glow-cyan">
+                    BUILD YOUR OWN PROFITABLE<br>
+                    <span class="text-cyan-400">MT5 AI TRADING BOT</span><br>
+                    IN JUST 7 DAYS
+                </h1>
+                <p class="text-xl text-gray-300">Even if you're a complete beginner.<br>No coding required • Trade 24/7 while you sleep</p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <div class="bg-white/10 px-6 py-3 rounded-2xl flex items-center gap-3">
+                        <i class="fa-solid fa-check text-cyan-400"></i>
+                        <span>Beginner-Friendly</span>
+                    </div>
+                    <div class="bg-white/10 px-6 py-3 rounded-2xl flex items-center gap-3">
+                        <i class="fa-solid fa-check text-cyan-400"></i>
+                        <span>24/7 Automated Profits</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <a href="javascript:void(0)" onclick="enrollNow()" 
+                       class="cta-button bg-cyan-500 hover:bg-cyan-600 text-black font-bold text-xl px-10 py-5 rounded-2xl inline-block">
+                        ENROLL NOW - ONLY ₦5,000
+                    </a>
+                    <div>
+                        <p class="text-sm text-gray-400 line-through">₦35,000</p>
+                        <p class="text-3xl font-bold text-emerald-400">Limited Offer</p>
+                    </div>
+                </div>
+
+                <!-- Countdown Timer -->
+                <div class="timer-box p-6 rounded-3xl inline-block">
+                    <p class="text-cyan-400 text-sm font-medium mb-2">⏰ SPECIAL PRICE ENDS IN</p>
+                    <div id="hero-timer" class="grid grid-cols-4 gap-4 text-center">
+                        <div><span id="hero-days" class="text-4xl font-bold">2</span><br><span class="text-xs text-gray-400">DAYS</span></div>
+                        <div><span id="hero-hours" class="text-4xl font-bold">12</span><br><span class="text-xs text-gray-400">HOURS</span></div>
+                        <div><span id="hero-minutes" class="text-4xl font-bold">45</span><br><span class="text-xs text-gray-400">MIN</span></div>
+                        <div><span id="hero-seconds" class="text-4xl font-bold">30</span><br><span class="text-xs text-gray-400">SEC</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- White & Cyan Robot Image -->
+            <div class="relative flex justify-center">
+                <div class="w-96 h-96 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl absolute"></div>
+                <img src="https://files.oaiusercontent.com/file-Vl2vX7z8kL9pQ2mN3bX9vC?se=2026-03-26T00%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D3628800%2C%20immutable&rscd=attachment%3B%20filename%3Dwhite-cyan-robot.png" 
+                     alt="Futuristic MT5 AI Trading Robot" 
+                     class="w-full max-w-md relative z-10 rounded-3xl shadow-2xl border border-cyan-400/30">
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION with Black & Gold Robot -->
+    <section id="enroll" class="py-32 bg-gradient-to-b from-transparent via-cyan-500/10 to-transparent">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <div class="inline-block bg-white/10 px-8 py-3 rounded-full mb-8 text-cyan-400 font-medium">Limited Time Offer</div>
+            <h2 class="text-5xl font-bold mb-6">Get Full Access Today For Only</h2>
+            <div class="flex justify-center items-baseline gap-4 mb-8">
+                <span class="text-6xl line-through text-gray-500">₦35,000</span>
+                <span class="text-7xl font-bold text-emerald-400">₦5,000</span>
+            </div>
+
+            <!-- Countdown in Pricing -->
+            <div class="timer-box p-6 rounded-3xl mb-10 inline-block">
+                <p class="text-cyan-400 text-sm font-medium mb-3">HURRY! OFFER ENDS IN</p>
+                <div id="pricing-timer" class="grid grid-cols-4 gap-6 text-center">
+                    <div><span id="pricing-days" class="text-5xl font-bold">2</span><br><span class="text-xs text-gray-400">DAYS</span></div>
+                    <div><span id="pricing-hours" class="text-5xl font-bold">12</span><br><span class="text-xs text-gray-400">HOURS</span></div>
+                    <div><span id="pricing-minutes" class="text-5xl font-bold">45</span><br><span class="text-xs text-gray-400">MIN</span></div>
+                    <div><span id="pricing-seconds" class="text-5xl font-bold">30</span><br><span class="text-xs text-gray-400">SEC</span></div>
+                </div>
+            </div>
+
+            <a href="javascript:void(0)" onclick="enrollNow()" 
+               class="cta-button block bg-gradient-to-r from-cyan-400 to-emerald-400 text-black font-bold text-2xl py-8 rounded-3xl mb-12">
+                YES! ENROLL NOW & START BUILDING MY BOT
+            </a>
+
+            <!-- Black & Gold Robot -->
+            <div class="flex justify-center">
+                <img src="https://files.oaiusercontent.com/file-X9kL3mP7vQ2wR8tY5uZ1?se=2026-03-26T00%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D3628800%2C%20immutable&rscd=attachment%3B%20filename%3Dblack-gold-robot.png" 
+                     alt="Premium Black & Gold AI Robot" 
+                     class="w-full max-w-lg rounded-3xl shadow-2xl border border-yellow-400/30">
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="javascript:void(0)" onclick="enrollNow()" 
+       class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-16 border-t border-cyan-500/30">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-6">Ready to Trade Smarter with AI?</h3>
+            <a href="javascript:void(0)" onclick="enrollNow()" 
+               class="inline-block bg-cyan-500 hover:bg-cyan-600 text-black font-bold px-12 py-6 rounded-3xl text-xl transition">
+                ENROLL NOW – ONLY ₦5,000
+            </a>
+            <p class="mt-12 text-gray-500">© 2026 FASTECH JUNCTION DIGITAL • All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const PAYMENT_LINK = "https://selar.com/2p7y144021"; // ← CHANGE THIS
+
+        function enrollNow() {
+            window.open(PAYMENT_LINK, '_blank');
+        }
+
+        // Countdown Timer
+        function startCountdown() {
+            const deadline = new Date(DEADLINE).getTime();
+            const timerInterval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = deadline - now;
+
+                if (distance < 0) {
+                    clearInterval(timerInterval);
+                    document.querySelectorAll('#hero-timer, #pricing-timer').forEach(el => {
+                        el.innerHTML = `<span class="text-red-400 font-bold">Offer Has Expired</span>`;
+                    });
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Hero Timer
+                document.getElementById('hero-days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hero-hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('hero-minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('hero-seconds').textContent = seconds.toString().padStart(2, '0');
+
+                // Pricing Timer
+                document.getElementById('pricing-days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('pricing-hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('pricing-minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('pricing-seconds').textContent = seconds.toString().padStart(2, '0');
+            }, 1000);
+        }
+
+        window.onload = startCountdown;
+
+        console.log("%cFASTECH JUNCTION DIGITAL Landing Page with Images & Timer Loaded Successfully", "color: #00f5ff; font-size: 14px;");
+    </script>
+</body>
+</html>
